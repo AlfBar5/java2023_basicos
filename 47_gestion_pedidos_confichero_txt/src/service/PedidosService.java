@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import model.Pedido;
 
 public class PedidosService {
+	
 	//arrayList que guarda objetos Pedido
 	//ArrayList<Pedido> pedidos=new ArrayList<>();
 	
@@ -67,10 +68,10 @@ public class PedidosService {
 			{
 				
 				//leemos la primera línea 
-				String linea=bf.readLine();
+				String linea;
 				
 				//si la primera línea o el fichero no existe:
-				if(linea==null) {
+				if((linea=bf.readLine())==null) {
 					return null;
 				}
 				
@@ -84,10 +85,10 @@ public class PedidosService {
 				
 				LocalDate fechaReciente=pedidoReciente.getFechaPedido();
 				
-				linea=bf.readLine();
+				//linea=bf.readLine();
 				//entramos en bucle para leer el resto
 				
-				while(linea!=null) {
+				while((linea=bf.readLine())!=null) {
 					//Hacemos el split de la línea dos y siguientes
 					datos = linea.split(",");
 					//hago el split
@@ -100,7 +101,7 @@ public class PedidosService {
 					}
 					
 					//pasamos a la siguiente línea				
-					linea=bf.readLine();
+					//linea=bf.readLine();
 					
 				}
 				
@@ -129,10 +130,10 @@ public class PedidosService {
 			{
 		
 			//leemos la primera línea 
-			String linea=bf.readLine();
+			String linea;
 								
 			//entramos en bucle directamente
-			while(linea!=null) {
+			while((linea=bf.readLine())!=null) {
 				
 				String [] datos = linea.split(",");
 								
@@ -144,7 +145,7 @@ public class PedidosService {
 				
 				}
 				//pasamos a la siguiente línea				
-				linea=bf.readLine();
+				//linea=bf.readLine();
 							
 			}
 			
